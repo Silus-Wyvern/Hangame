@@ -1,0 +1,14 @@
+; hangame.def
+;
+; Exports the loader entry point under its UNDECORATED name "load".
+;
+; void __stdcall load(void) decorates to _load@0 under MSVC. patch.dll's ASI
+; loader resolves the export by the plain name "load" (GetProcAddress style),
+; so without this .def the loader would fail to find the decorated symbol.
+;
+; This is the same export-name issue you hit converting the BBPP DLL to an
+; ASI; the .def is the clean fix (alternative: a /EXPORT linker pragma).
+
+LIBRARY hangame
+EXPORTS
+    load

@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Hangame.vcxproj" Id="90ec7217-b3fc-48b9-9ab1-948740f164cf" />
+</Solution>
